@@ -4,6 +4,7 @@ const { PORT } = process.env || 5000;
 // let { MONGODB_URI } = process.env;
 const { MONGODB_URI } = process.env;
 
+const { SECRET } = process.env;
 // if (process.env.NODE_ENV === 'test') {
 //   MONGODB_URI = process.env.TEST_URI;
 // }
@@ -19,4 +20,5 @@ const { MONGODB_URI } = process.env;
 module.exports = {
   MONGODB_URI,
   PORT,
+  SECRET,
 };
