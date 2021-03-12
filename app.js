@@ -10,13 +10,13 @@ const usersRouter = require('./controllers/users');
 const loginRouter = require('./controllers/login');
 const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 
-dotenv.config();
-const MONGODB_URI = "mongodb+srv://todo-admin:hRP3N910lgfTXVpN@cluster0.5v9ve.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+// dotenv.config();
+// const MONGODB_URI = "mongodb+srv://todo-admin:hRP3N910lgfTXVpN@cluster0.5v9ve.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
-// logger.info('connecting to', config.MONGODB_URI);
-logger.info('connecting to', MONGODB_URI);
+logger.info('connecting to', config.MONGODB_URI);
+// logger.info('connecting to', MONGODB_URI);
 
 mongoose
   .connect(MONGODB_URI, {
