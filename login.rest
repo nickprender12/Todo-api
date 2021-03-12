@@ -2,6 +2,6 @@ post https://rocky-escarpment-21076.herokuapp.com/api/login
 Content-Type:  application/json
 
 {
-  "username": "root",
+  "username": "rootadmin",
   "password": "password"
 }
