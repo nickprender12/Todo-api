@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test jest --verbose --runInBand",
     "client": "cd ../todo-client && npm run start",
     "dev": "concurrently \"npm run start:dev\" \"npm run client\"",
-    "start": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=development node index.js",
     "start:dev": "NODE_ENV=development nodemon index.js",
     "eslint": "eslint .",
     "build:ui": "rm -rf build && cd ../todo-client && npm run build --prod && cp -r build ../todo-api",
@@ -19,13 +19,13 @@
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1",
@@ -33,13 +33,13 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
-    "concurrently": "^6.0.0",
+    "concurrently": "^6.0.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.14"
+    "mongoose": "^5.12.7"
   },
   "jest": {
     "testEnvironment": "node"

@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 if (process.env.NODE_ENV === 'development') {
-  MONGODB_URI = process.env.MONGODB_URI;
+  MONGODB_URI = process.env.LOCAL_URI;
 }
 
 module.exports = {

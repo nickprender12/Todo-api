@@ -11,7 +11,11 @@ todosRouter.get('/', async (req, res) => {
     username: 1,
     name: 1,
   });
-  res.json(todos);
+  if (todos) {
+    res.json(todos);
+  } else {
+    res.status(404).end();
+  }
 });
 
 todosRouter.get('/:id', async (request, response) => {
@@ -24,6 +28,7 @@ todosRouter.get('/:id', async (request, response) => {
   }
 });
 
+// eslint-disable-next-line consistent-return
 todosRouter.post('/', async (request, response) => {
   const { body } = request;
   const decodedToken = jwt.verify(request.token, process.env.SECRET);
