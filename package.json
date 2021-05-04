@@ -7,7 +7,7 @@
     "test": "NODE_ENV=test jest --verbose --runInBand",
     "client": "cd ../todo-client && npm run start",
     "dev": "concurrently \"npm run start:dev\" \"npm run client\"",
-    "start": "NODE_ENV=development node index.js",
+    "start": "NODE_ENV=production node index.js",
     "start:dev": "NODE_ENV=development nodemon index.js",
     "eslint": "eslint .",
     "build:ui": "rm -rf build && cd ../todo-client && npm run build --prod && cp -r build ../todo-api",
