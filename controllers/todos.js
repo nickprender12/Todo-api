@@ -68,6 +68,7 @@ todosRouter.delete('/:id', async (request, response) => {
   const { id } = request.params;
   const todoToDelete = await Todo.findByIdAndDelete(id);
 
-  response.status(204).json(todoToDelete).end();
+  // response.status(204).json(todoToDelete).end();
+  response.json(todoToDelete);
 });
 module.exports = todosRouter;
